@@ -117,3 +117,37 @@ print(temp)
 temp <- sqrt(1:9)
 
 print(temp)
+
+print("Round Function")
+ y<- c(1.2,3.9,0.4)
+ print(round(y))
+
+f <- function(elt,s) return(elt +3)
+ y <- c(1,2,4)
+temp<- f(y,1)
+print(temp)
+print(y+4)
+
+# is that the + is actually considered a function! Look at it here:
+
+print('+'(y+5))
+
+
+#The Case of Vector-Valued Functions
+print("Elementwise Operations in Nonvectorizable Settings")
+print("avoid writing")
+
+lv <- length(v)
+outvec <- vector(length = lv)
+for(i in 1:lv){
+  outvec[i] <- f(v[i])
+}
+print(outvec)
+
+print("Write like this")
+outvec <- apply(as.matrix(v),1,f)
+print(outvec)
+
+
+
+
