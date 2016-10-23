@@ -54,3 +54,66 @@ print(x)
 
 x <- x+c(1,2)
 print(x)
+
+
+# Vector indexing
+#You can also do indexing of vectors, picking out elements with specific indices, e.g.
+ y <- c(1,2,3,4,5,6,7,8,9)
+ print(y[c(1,3)])
+ 
+x <- c(1,2,1.5,3.4,5,6,7,9)
+y <- x[c(1,1,3)]
+
+print(y)
+
+
+z<- c(5,12,13)
+print (z[-1])
+
+
+print(z[-1:-2])
+
+print(z[1:length(z)-1])
+
+x <- c(12,15,8,11,24)
+y<- x[-1] -x[-length(x)]
+print(y)
+#Here we want to find the numbers 15-12 = 3, 8-15 = -7, etc
+
+
+# vector Elament names : 
+
+x <- c(1,2,4)
+print(names(x))
+
+names(x) <- c("a","b","c")
+print(names(x))
+print(x)
+
+
+names(x) <- NULL
+print("Assigning name equal Null")
+print(x)
+
+
+# Element wise Operation on Vectors :
+
+print("Elementwise Operation on vectors")
+u <- c(5,2,8)
+v <- c(1,3,9)
+print(u+v)
+print(u>v)
+
+w <- function(x) return(x+1)
+print(w(u))
+
+f <- function(x,c) return((x+c)^2)
+temp <- f(1:3,2)
+print(temp)
+
+
+# Even the transcendental functions are vectorized
+
+temp <- sqrt(1:9)
+
+print(temp)
