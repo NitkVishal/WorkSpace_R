@@ -26,5 +26,11 @@
  
  # Indexing
  y <- matrix(c(11,21,31,12,22,32), nrow =  3, ncol = 2)
-
- print(y) 
+  print(y) 
+  print(y[2:3,])
+  
+  
+# copy to smaller slice Matrix ..
+  
+  y [2:3,] <- matrix(c(1,1,8,12), nrow = 2)
+  print(y)
