@@ -8,3 +8,9 @@ print(class(z))
 print(attributes(z))
 print(attributes(r2))
 
+r <- z[2,, drop = F]
+print(r)
+temp <- dim(r)
+print(temp)
+
+# 
